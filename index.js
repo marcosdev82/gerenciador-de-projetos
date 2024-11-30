@@ -9,22 +9,18 @@ const port = 3000;
 app.use(cors({ credentials: true, origin: '*' }));
 app.use(bodyParser.json());
 
-function naoImplementado(req, res) {
-    res.status(501).json({ erro: 'Não implementado' });
-}
+// Função para resposta "Não implementado"
+const naoImplementado = (req, res) => {
+  res.status(501).json({ erro: 'Não implementado' });
+};
 
-// Rota para listar todas as tarefas
-app.get('/gerenciador-tarefas', (req, res) => naoImplementado);
-// Rota para listar tarefas por ID
-app.get('/gerenciador-tarefas/:id', (req, res) => naoImplementado);
-// Rota cadastrar tarefa
-app.post('/gerennciado-tarefas', (req, res) => naoImplementado);
-// Rota atualizar tarefa
-app.put('/gerennciado-tarefas/:id', (req, res) => naoImplementado);
-// Rota deletar tarefa
-app.delete('/gerennciado-tarefas/:id', (req, res) => naoImplementado);
-// Rota concluir tarefa
-app.put('/gerennciado-tarefas/:id/concluir', (req, res) => naoImplementado);
+// Rotas
+app.get('/gerenciador-tarefas', naoImplementado); // Listar todas as tarefas
+app.get('/gerenciador-tarefas/:id', naoImplementado); // Listar tarefa por ID
+app.post('/gerenciador-tarefas', naoImplementado); // Cadastrar tarefa
+app.put('/gerenciador-tarefas/:id', naoImplementado); // Atualizar tarefa
+app.delete('/gerenciador-tarefas/:id', naoImplementado); // Deletar tarefa
+app.put('/gerenciador-tarefas/:id/concluir', naoImplementado); // Concluir tarefa
 
 // Inicialização do servidor
 app.listen(port, () => {
