@@ -17,6 +17,14 @@ function naoImplementado(req, res) {
 app.get('/gerenciador-tarefas', (req, res) => naoImplementado);
 // Rota para listar tarefas por ID
 app.get('/gerenciador-tarefas/:id', (req, res) => naoImplementado);
+// Rota cadastrar tarefa
+app.post('/gerennciado-tarefas', (req, res) => naoImplementado);
+// Rota atualizar tarefa
+app.put('/gerennciado-tarefas/:id', (req, res) => naoImplementado);
+// Rota deletar tarefa
+app.delete('/gerennciado-tarefas/:id', (req, res) => naoImplementado);
+// Rota concluir tarefa
+app.put('/gerennciado-tarefas/:id/concluir', (req, res) => naoImplementado);
 
 // Inicialização do servidor
 app.listen(port, () => {
