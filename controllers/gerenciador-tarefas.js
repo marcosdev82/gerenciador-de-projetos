@@ -48,7 +48,24 @@ function ListarTarefas(req, res) {
     })
 }
 
+function cadastrarTarefa(req, res) {
+   
+    if (!req.body['nome'] && !req.body['concluida']) {
+        res.status(400).json({ erro: 'Requisição inválida.' });
+        return; // Adicione para evitar que a execução continue após o erro
+    }
+    const tarefa = {
+        id: uuidv4(),
+        nome: req.body['nome'],
+        concluida: req.body['concluida']
+    };
+    tarefas.push(tarefa);
+    res.json(tarefas);
+}
+
+
 module.exports = {
     ListarTarefasId,
-    ListarTarefas
+    ListarTarefas,
+    cadastrarTarefa
 }
