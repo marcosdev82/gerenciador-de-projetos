@@ -63,9 +63,14 @@ function cadastrarTarefa(req, res) {
     res.json(tarefas);
 }
 
+function atualizarTarefa(req, res) {
+
+}
+
 
 module.exports = {
     ListarTarefasId,
     ListarTarefas,
-    cadastrarTarefa
+    cadastrarTarefa,
+    atualizarTarefa
 }
