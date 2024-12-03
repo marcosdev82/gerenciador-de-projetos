@@ -6,7 +6,7 @@ const  { ListarTarefasId, ListarTarefas, cadastrarTarefa, atualizarTarefa }  = r
 
 
 const app = express();
-const port = 3000;
+const port = 4000;
 
 // Configuração do middleware
 app.use(cors({ credentials: true, origin: '*' }));

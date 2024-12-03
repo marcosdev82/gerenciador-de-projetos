@@ -65,6 +65,21 @@ function cadastrarTarefa(req, res) {
 
 function atualizarTarefa(req, res) {
 
+    if (!req.body['nome'] && !req.body['concluida']) {
+        res.status(400).json({ erro: 'Requisição inválida.' });
+        return; // Adicione para evitar que a execução continue após o erro
+    }
+
+    const id = req.params.id
+
+    tarefas = tarefas.map(tarefa => {
+        if (tarefa.id === id) {
+            tarefa.nome = req.body['nome']
+            tarefa.concluida = req.body['concluida']
+        }
+        return tarefa;
+    });
+
 }
 
 
