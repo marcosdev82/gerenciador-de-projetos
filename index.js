@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors'); // Libera acessos de domínios diferentes
 
-const  { ListarTarefasId, ListarTarefas, cadastrarTarefa, atualizarTarefa }  = require('./controllers/gerenciador-tarefas')
+const  { ListarTarefasId, ListarTarefas, cadastrarTarefa, atualizarTarefa, removerTarefa }  = require('./controllers/gerenciador-tarefas')
 
 
 const app = express();
@@ -22,7 +22,7 @@ app.get('/gerenciador-tarefas', ListarTarefas); // Listar todas as tarefas
 app.get('/gerenciador-tarefas/:id', ListarTarefasId ); // Listar tarefa por ID
 app.post('/gerenciador-tarefas', cadastrarTarefa); // Cadastrar tarefa
 app.put('/gerenciador-tarefas/:id', atualizarTarefa); // Atualizar tarefa
-app.delete('/gerenciador-tarefas/:id', naoImplementado); // Deletar tarefa
+app.delete('/gerenciador-tarefas/:id', removerTarefa); // Deletar tarefa
 app.put('/gerenciador-tarefas/:id/concluir', naoImplementado); // Concluir tarefa
 
 // Inicialização do servidor
