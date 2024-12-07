@@ -6,7 +6,10 @@ let tarefas = [
     {id: 3, nome: 'Padrões de projeto', concluida: true},
     {id: 4, nome: 'Type Script', concluida: true},
     {id: 5, nome: 'React Native', concluida: true},
-    {id: 6, nome: 'Node com Type Script', concluida: true},
+    {id: 7, nome: 'CRUD em node', concluida: true},
+    {id: 8, nome: 'Laravel 11', concluida: true},
+    {id: 9, nome: 'MongoDB', concluida: true},
+    {id: 10, nome: 'TypeORM', concluida: true},
 ];
 
 function ListarTarefasId(req, res) {
@@ -42,7 +45,7 @@ function ListarTarefas(req, res) {
 
     // retornar
     res.json({
-        totalItem: tarefasRetornar.length,
+        totalItems: tarefasRetornar.length,
         tarefas: tarefasRetornar.slice(0).splice((pagina - 1) * itemPorPagina, itemPorPagina),
         pagina: pagina
     })
