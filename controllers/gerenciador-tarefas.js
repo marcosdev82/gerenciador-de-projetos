@@ -102,7 +102,7 @@ function removerTarefa(req, res) {
     const numTarefas = tarefas.length;
 
     tarefas = tarefas.filter(tarefa => tarefa.id !== id);
-    console.log(tarefas)
+   
     if (numTarefas === tarefas.length) {
         return res.status(404).json({ erro: 'Tarefa não encontrada.' });
     }
