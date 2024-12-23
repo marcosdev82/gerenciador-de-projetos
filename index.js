@@ -8,7 +8,7 @@ const  {
   cadastrarTarefa, 
   atualizarTarefa, 
   removerTarefa,
-  concluirTrefa
+  concluirTarefa
 }  = require('./controllers/gerenciador-tarefas')
 
 
@@ -30,7 +30,7 @@ app.get('/gerenciador-tarefas/:id', ListarTarefasId ); // Listar tarefa por ID
 app.post('/gerenciador-tarefas', cadastrarTarefa); // Cadastrar tarefa
 app.put('/gerenciador-tarefas/:id', atualizarTarefa); // Atualizar tarefa
 app.delete('/gerenciador-tarefas/:id', removerTarefa); // Deletar tarefa
-app.put('/gerenciador-tarefas/:id/concluir', concluirTrefa); // Concluir tarefa
+app.put('/gerenciador-tarefas/:id/concluir', concluirTarefa); // Concluir tarefa
 
 // Inicialização do servidor
 app.listen(port, () => {
